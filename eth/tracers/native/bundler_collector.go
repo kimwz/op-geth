@@ -124,7 +124,7 @@ func (b *bundlerCollector) isEXTorCALL(opcode string) bool {
 // [OP-062]
 func (b *bundlerCollector) isAllowedPrecompile(addr common.Address) bool {
 	addrInt := addr.Big()
-	return addrInt.Cmp(big.NewInt(0)) == 1 && addrInt.Cmp(big.NewInt(10)) == -1
+	return addrInt.Cmp(big.NewInt(0)) == 1 && addrInt.Cmp(big.NewInt(1000)) == -1
 }
 
 func (b *bundlerCollector) incrementCount(m map[string]uint64, k string) {
